@@ -9,6 +9,8 @@ jpg estando algunos en el repositorio
 basandonos en; laravel, vuejs, tryghost y arduino. Ademas 
 de eliminar las jpg existentes y provar su funcionalidad
 
+20/4/21 5° commit: Se elimina top secret y se añade a .gitignore 
+(Finalizan pruebas con .gitignore)
 
 
 
