@@ -12,5 +12,6 @@ de eliminar las jpg existentes y provar su funcionalidad
 20/4/21 5° commit: Se elimina top secret y se añade a .gitignore 
 (Finalizan pruebas con .gitignore)
 
-
+26/4/21 6° commit: Se crea el branch fix-typo para realizar 
+prueba en solitacion de pull request
 
