@@ -19,3 +19,5 @@ prueba en solitacion de pull request
 en bitbucked para prueba con fetch
 8/5/21 7° commit: Se realiza prueba para fetch, commit en bitbucket para traerlo por pull fetch
 
+8/5/21 8° commit: Se crea commit en local para segunda prueba
+con fetch
