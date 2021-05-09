@@ -15,3 +15,5 @@ de eliminar las jpg existentes y provar su funcionalidad
 26/4/21 6° commit: Se crea el branch fix-typo para realizar 
 prueba en solitacion de pull request
 
+8/5/21 7° commit: Se crea commit en local diferente del commit 
+en bitbucked para prueba con fetch
