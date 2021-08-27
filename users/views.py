@@ -5,16 +5,46 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 
-#Models
+# Exception
+from django.db.utils import IntegrityError
+
+# Models
 from django.contrib.auth.models import User
 from users.models import Profile
 
-#Exception
-from django.db.utils import IntegrityError
+# Forms
+from users.forms import ProfileForm
 
 def update_profile(request):
-    """Update a user's profile view"""
-    return render(request, 'users/update_profile.html')
+    """Update a user's profile view."""
+    profile = request.user.profile
+
+    if request.method == 'POST':
+        form = ProfileForm(request.POST, request.FILES)
+        if form.is_valid():
+            data = form.cleaned_data
+
+            profile.website = data['website']
+            profile.phone_number = data['phone_number']
+            profile.biography = data['biography']
+            if data['picture']:
+                profile.picture = data['picture']
+            profile.save()
+
+            return redirect('update_profile')
+
+    else:
+        form = ProfileForm()
+
+    return render(
+        request=request,
+        template_name='users/update_profile.html',
+        context={
+            'profile': profile,
+            'user': request.user,
+            'form': form
+        }
+    )
 
 def login_view(request):
     """Login view."""
